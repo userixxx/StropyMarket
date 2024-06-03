@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/*!
+ * Bootstrap Vertical Menu v0.0.2 (https://iqbalfn.github.io/bootstrap-vertical-menu/)
+ * Copyright 2019 Iqbal Fauzi
+ * Licensed under MIT (https://github.com/iqbalfn/bootstrap-vertical-menu/blob/master/LICENSE)
+ */
+.vertical-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.vertical-menu ul ul {
+    display: none;
+}
+
+.vertical-menu a {
+    display: block;
+    padding: 0 2rem;
+    line-height: 2.5rem;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.vertical-menu a>i:first-child {
+    width: 2rem;
+    display: inline-block;
+}
+
+.vertical-menu li.show>ul {
+    display: block;
+}
+
+.vertical-menu-parent>a:before {
+    content: "";
+    font-family: FontAwesome;
+    float: right;
+}
+
+.vertical-menu-parent.show>a:before {
+    content: "";
+}
+
+.vertical-menu-dark {
+    background: black;
+}
+
+.vertical-menu-dark li.show,
+.vertical-menu-dark li.active {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.vertical-menu-dark li.show>a,
+.vertical-menu-dark li.active>a {
+    color: white;
+}
+
+.vertical-menu-dark a {
+    color: rgba(158, 158, 158, 0.9);
+}
+
+.vertical-menu-dark a:hover,
+.vertical-menu-dark a:focus {
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.vertical-menu-light {
+    background: white;
+}
+
+.vertical-menu-light li.show,
+.vertical-menu-light li.active {
+    background: rgba(33, 33, 33, 0.03);
+}
+
+.vertical-menu-light li.show>a,
+.vertical-menu-light li.active>a {
+    color: black;
+}
+
+.vertical-menu-light a {
+    color: rgba(117, 117, 117, 0.9);
+}
+
+.vertical-menu-light a:hover,
+.vertical-menu-light a:focus {
+    color: #424242;
+    background: rgba(33, 33, 33, 0.05);
+}
+
+
+/* CUSTOM */
+
+.navigation ul {
+    padding-left: 0;
+    list-style: none;
+
+}
+
+.navigation ul li {
+    background-color: #fff;
+    position: relative;
+}
+
+.navigation ul li a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    text-decoration: none;
+    padding: 6px 15px;
+    display: block;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    transition: 0.25s;
+}
+.vertical-menu-parent>a:before{
+    color: #cfb148;
+    font-size: 20px;
+}
+
+.navigation .vertical-menu > div > ul > li::after,
+.navigation .vertical-menu > ul > li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 16px;
+    left: 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+
+}
+
+.navigation .vertical-menu  > div > ul > li:hover::after {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(207, 177, 72, 0.75) 100%);
+}
+
+.navigation .vertical-menu-parent ul li a{
+    line-height: 30px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+}
